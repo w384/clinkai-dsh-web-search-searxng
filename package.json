@@ -1,0 +1,39 @@
+{
+  "name": "dsh-web-search-searxng",
+  "description": "SearXNG-backed search provider for the DeepSeek Harness web seam (ctx.web) — self-hosted, free, no API key.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "README.md"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "searxng",
+    "web-search",
+    "metasearch",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-web": "^0.1.5-rc.2",
+    "@deepseek-ai/schemastery": "^3.18.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-web": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}

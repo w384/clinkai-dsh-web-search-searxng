@@ -23,6 +23,7 @@
     "README.md"
   ],
   "keywords": [
+    "dsh-plugin",
     "deepseek-harness",
     "dsh",
     "searxng",

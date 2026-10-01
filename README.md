@@ -42,7 +42,12 @@ Then install this provider into a DSH profile:
 ```sh
 dsh plugin --profile web add @clinkai/dsh-web-search-searxng   # from npm (once published)
 # or, from a local/git source:
-dsh plugin --profile web add "link:/path/to/clinkai-dsh-web-search-searxng"
+# straight from GitHub — no registry needed, the built entry is committed
+dsh plugin --profile web add github:w384/clinkai-dsh-web-search-searxng
+
+# from a local checkout, or from a packed tarball
+dsh plugin --profile web add link:/path/to/clinkai-dsh-web-search-searxng
+dsh plugin --profile web add ./clinkai-dsh-web-search-searxng-0.1.0.tgz
 ```
 
 Installing the package is enough: it ships a `dsh.bundle.patch`, so DSH mounts the

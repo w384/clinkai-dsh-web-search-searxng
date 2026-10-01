@@ -1,7 +1,7 @@
 {
   "name": "@clinkai/dsh-web-search-searxng",
-  "description": "SearXNG-backed search provider for the DeepSeek Harness web seam (ctx.web) — self-hosted, free, no API key.",
-  "version": "0.1.0",
+  "description": "SearXNG-backed web search provider for the DeepSeek Harness web seam (ctx.web), with automatic fallback to the built-in DeepSeek search when SearXNG is unreachable.",
+  "version": "0.2.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -29,7 +29,8 @@
     "searxng",
     "web-search",
     "metasearch",
-    "plugin"
+    "plugin",
+    "fallback"
   ],
   "peerDependencies": {
     "@deepseek-ai/dsh-web": ">=0.1.5-rc.2 <1.0.0",

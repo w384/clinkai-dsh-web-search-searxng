@@ -1,4 +1,4 @@
-# dsh-web-search-searxng bundle patch: mounts the SearXNG web-search
+# clinkai-dsh-web-search-searxng bundle patch: mounts the SearXNG web-search
 # provider into a profile layer stack. The profile's own cordis.patch.yml and
 # any --patch overlays still apply after this layer; the row below can be
 # overridden by id to pin this instance's baseUrl.

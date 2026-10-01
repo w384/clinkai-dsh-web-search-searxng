@@ -1,4 +1,4 @@
-# dsh-web-search-searxng
+# @clinkai/dsh-web-search-searxng
 
 A **SearXNG**-backed `web_search` provider for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) web capability seam (`ctx.web`).
 
@@ -40,19 +40,20 @@ search:
 Then install this provider into a DSH profile:
 
 ```sh
-dsh plugin --profile web add dsh-web-search-searxng   # from npm (once published)
+dsh plugin --profile web add @clinkai/dsh-web-search-searxng   # from npm (once published)
 # or, from a local/git source:
 dsh plugin --profile web add "link:/path/to/dsh-web-search-searxng"
 ```
 
-Enable it and pin the web seam to it. In `$DSH_HOME/profiles/<profile>/cordis.patch.yml`:
+Installing the package is enough: it ships a `dsh.bundle.patch`, so DSH mounts the
+provider as a bundle layer. Override the row by id only to pin this instance's
+SearXNG origin, and point the seam at the provider. In
+`$DSH_HOME/profiles/<profile>/cordis.patch.yml`:
 
 ```yaml
-- insert:
-    - id: web-search-searxng
-      name: dsh-web-search-searxng
-      config:
-        baseUrl: http://127.0.0.1:8080
+- id: web-search-searxng
+  config:
+    baseUrl: http://127.0.0.1:18081
 - id: web
   config:
     searchProvider: searxng

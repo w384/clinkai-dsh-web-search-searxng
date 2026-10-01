@@ -3,6 +3,14 @@
   "description": "SearXNG-backed search provider for the DeepSeek Harness web seam (ctx.web) — self-hosted, free, no API key.",
   "version": "0.1.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w384/clinkai-dsh-web-search-searxng.git"
+  },
+  "homepage": "https://github.com/w384/clinkai-dsh-web-search-searxng#readme",
+  "bugs": {
+    "url": "https://github.com/w384/clinkai-dsh-web-search-searxng/issues"
+  },
   "type": "module",
   "main": "lib/index.js",
   "exports": {
